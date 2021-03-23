@@ -1,0 +1,24 @@
+img{
+  clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
+}
+.img{
+  position: relative;
+  margin-bottom: 5rem;
+}
+.round{
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: -1rem;
+  width: 6rem;
+  height: 6rem;
+  color:#fff;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  border: 8px solid #fff;
+  background-color: rgba(0, 0, 0, 0.304);
+  border-radius: 50%;
+  position: absolute;
+  left: 50%; 
+  transform: translate(-50%)
+}

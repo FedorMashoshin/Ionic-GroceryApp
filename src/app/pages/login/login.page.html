@@ -1,0 +1,48 @@
+<ion-content>
+  <form [formGroup]="registerForm" (ngSubmit)="register()">
+    <div class="img">
+      <img src="https://cdn.gobankingrates.com/wp-content/uploads/2019/03/fresh-produce-in-grocery-bag-iStock-936387810.jpg" alt="">
+      <div class="round">
+        Online Grocery
+      </div>
+    </div>
+    <ion-item lines="none">
+      <ion-label>
+        Email
+      </ion-label>
+      <ion-input type="email" placeholder="youremail@email.com" formControlName="email"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label>
+        Name
+      </ion-label>
+      <ion-input placeholder="Your name" formControlName="name"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label>
+        Password
+      </ion-label>
+      <ion-input type="password" formControlName="password"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label>Select type</ion-label>
+      <ion-select formControlName="type">
+          <ion-select-option value="BUYER">Buyer</ion-select-option>
+          <ion-select-option value="SELLER">Seller</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button expand="block" type="submit" [disabled]="!registerForm.valid">
+      Register
+    </ion-button>
+
+    <ion-button expand="block" type="button" color="secondary" fill="clear"
+    class="ion-padding-horizontal ion-margin-vertical" (click)="toggleRegister()">
+    <ion-icon name="arrow-back" slot="start"></ion-icon>
+  Back to Login
+  </ion-button>
+  </form>
+</ion-content>
