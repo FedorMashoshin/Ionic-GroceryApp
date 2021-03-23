@@ -6,43 +6,49 @@
         Online Grocery
       </div>
     </div>
-    <ion-item lines="none">
-      <ion-label>
-        Email
-      </ion-label>
-      <ion-input type="email" placeholder="youremail@email.com" formControlName="email"></ion-input>
+    <h2>Register new user</h2>
+    <ion-item lines="full">
+        <ion-label position="stacked">
+          Email
+        </ion-label>
+        <ion-input type="email" placeholder="youremail@email.com" formControlName="email">
+        </ion-input>
     </ion-item>
 
-    <ion-item lines="none">
-      <ion-label>
+    <ion-item lines="full">
+      <ion-label position="stacked">
         Name
       </ion-label>
       <ion-input placeholder="Your name" formControlName="name"></ion-input>
     </ion-item>
 
-    <ion-item lines="none">
-      <ion-label>
+    <ion-item lines="full">
+      <ion-label position="stacked">
         Password
       </ion-label>
       <ion-input type="password" formControlName="password"></ion-input>
     </ion-item>
 
-    <ion-item lines="none">
-      <ion-label>Select type</ion-label>
+    <ion-item lines="full">
+      <ion-label position="stacked">User type</ion-label>
       <ion-select formControlName="type">
           <ion-select-option value="BUYER">Buyer</ion-select-option>
           <ion-select-option value="SELLER">Seller</ion-select-option>
       </ion-select>
     </ion-item>
 
+   <div class="buttons">
     <ion-button expand="block" type="submit" [disabled]="!registerForm.valid">
       Register
     </ion-button>
 
+    <div class="login-text">
+      Already have an account?
     <ion-button expand="block" type="button" color="secondary" fill="clear"
     class="ion-padding-horizontal ion-margin-vertical" (click)="toggleRegister()">
-    <ion-icon name="arrow-back" slot="start"></ion-icon>
-  Back to Login
-  </ion-button>
+      Login
+    </ion-button>
+    </div>
+   </div>
   </form>
 </ion-content>
