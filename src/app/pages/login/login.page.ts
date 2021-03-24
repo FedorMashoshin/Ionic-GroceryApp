@@ -2,6 +2,7 @@ import { AuthService } from './../../services/auth.service';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { LoadingController, ToastController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -18,7 +19,8 @@ export class LoginPage implements OnInit {
     private formBuilder: FormBuilder,
     private authService: AuthService,
     private loadingCtrl: LoadingController,
-    private toastCtrl: ToastController
+    private toastCtrl: ToastController,
+    private router: Router
     ) { }
 
   ngOnInit() {
@@ -34,6 +36,15 @@ export class LoginPage implements OnInit {
     })
   }
 
+  navigateByType(type){
+    if (type === 'BUYER'){
+      this.router.navigateByUrl('/buyer');
+    }
+    else if (type === 'SELLER'){
+      this.router.navigateByUrl('/seller');
+    }
+  }
+
   async login(){
     let loading = await this.loadingCtrl.create({
       message: `Logging you in...`
@@ -41,7 +52,8 @@ export class LoginPage implements OnInit {
     await loading.present();
     this.authService.signIn(this.loginForm.value).subscribe(user => {
       loading.dismiss();
-      console.log('LOGIN:', user)
+      this.loginForm.reset();
+      this.navigateByType(user['type']);
     },
     async err => {
       await loading.dismiss();
@@ -73,7 +85,7 @@ export class LoginPage implements OnInit {
         message: `Your account has been created!`
       });
       toast.present();
-      console.log('RESULT IS:', res)
+      this.navigateByType(this.registerForm.value['type']);
     },
     async err => {
       await loading.dismiss();
