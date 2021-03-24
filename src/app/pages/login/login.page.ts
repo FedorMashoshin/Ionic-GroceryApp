@@ -1,5 +1,5 @@
 import { AuthService } from './../../services/auth.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { LoadingController, ToastController } from '@ionic/angular';
 
@@ -10,6 +10,7 @@ import { LoadingController, ToastController } from '@ionic/angular';
 })
 export class LoginPage implements OnInit {
   registerForm: FormGroup;
+  @ViewChild('flipcontainer') flipcontainer: ElementRef
   constructor(
     private formBuilder: FormBuilder,
     private authService: AuthService,
@@ -58,4 +59,7 @@ export class LoginPage implements OnInit {
     })
   }
 
+  toggleRegister(){
+    this.flipcontainer.nativeElement.classList.toggle('flip');
+  }
 }
