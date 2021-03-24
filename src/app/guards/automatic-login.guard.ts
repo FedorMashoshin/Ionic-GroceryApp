@@ -7,7 +7,7 @@ import { AuthService } from '../services/auth.service';
 @Injectable({
   providedIn: 'root'
 })
-export class TypeGuard implements CanActivate {
+export class AutomaticLoginGuard implements CanActivate {
 
   constructor(
     private router: Router,
@@ -15,19 +15,19 @@ export class TypeGuard implements CanActivate {
   ){}
 
   canActivate(route: ActivatedRouteSnapshot): Observable<boolean> {
-    const expectedType = route.data.type;
     return this.authService.user.pipe(
       take(1),
       map(user => {
         if (!user) {
-          return false;
+          return true;
         } else {
             const type = user['type'];
-            if (expectedType === type){
-              return true;
-            } else {
-              this.router.navigateByUrl('/')
+            if (type === 'BUYER'){
+              this.router.navigateByUrl('/buyer')
+            } else if (type === 'SELLER') {
+              this.router.navigateByUrl('/seller')
             }
+            return false;
           }
       })
       )

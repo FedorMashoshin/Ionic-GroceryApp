@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AngularFireAuthGuard, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 import { TypeGuard } from './guards/type.guard';
+import { AutomaticLoginGuard } from './guards/automatic-login.guard';
 
 const redirectUnauthUser = () => redirectUnauthorizedTo(['/'])
 
@@ -13,7 +14,8 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule),
+    canActivate: [AutomaticLoginGuard]
   },
   {
     path: 'buyer',
