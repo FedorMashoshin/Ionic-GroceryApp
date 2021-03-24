@@ -2,7 +2,7 @@
   <div class="flip-container" #flipcontainer>
     <div class="flipper">
       <div class="front">
-        <form [formGroup]="registerForm" (ngSubmit)="register()">
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
           <div class="img">
             <img src="https://cdn.gobankingrates.com/wp-content/uploads/2019/03/fresh-produce-in-grocery-bag-iStock-936387810.jpg" alt="">
             <div class="round">
@@ -26,14 +26,13 @@
           </ion-item>
       
          <div class="buttons">
-          <ion-button expand="block" type="button">
+          <ion-button expand="block" type="submit" [disabled]="!loginForm.valid">
             Login
           </ion-button>
       
           <div class="login-text">
             Don'have an account yet?
-          <ion-button expand="block" type="button" color="secondary" fill="clear"
-          class="ion-padding-horizontal ion-margin-vertical" (click)="toggleRegister()">
+          <ion-button expand="block" type="button" color="secondary" fill="clear" (click)="toggleRegister()">
             Register
           </ion-button>
           </div>
@@ -86,8 +85,7 @@
       
           <div class="login-text">
             Already have an account?
-          <ion-button expand="block" type="button" color="secondary" fill="clear"
-          class="ion-padding-horizontal ion-margin-vertical" (click)="toggleRegister()">
+          <ion-button expand="block" type="button" color="secondary" fill="clear" (click)="toggleRegister()">
             Login
           </ion-button>
           </div>

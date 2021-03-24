@@ -10,7 +10,10 @@ import { LoadingController, ToastController } from '@ionic/angular';
 })
 export class LoginPage implements OnInit {
   registerForm: FormGroup;
-  @ViewChild('flipcontainer') flipcontainer: ElementRef
+  loginForm: FormGroup;
+
+  @ViewChild('flipcontainer') flipcontainer: ElementRef;
+
   constructor(
     private formBuilder: FormBuilder,
     private authService: AuthService,
@@ -24,6 +27,32 @@ export class LoginPage implements OnInit {
       password: ['', [Validators.required, Validators.minLength(8)]],
       name: ['', Validators.required],
       type: ['BUYER', Validators.required]
+    });
+    this.loginForm = this.formBuilder.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(8)]]
+    })
+  }
+
+  async login(){
+    let loading = await this.loadingCtrl.create({
+      message: `Logging you in...`
+    });
+    await loading.present();
+    this.authService.signIn(this.loginForm.value).subscribe(user => {
+      loading.dismiss();
+      console.log('LOGIN:', user)
+    },
+    async err => {
+      await loading.dismiss();
+      
+      let toast = await this.toastCtrl.create({
+        position: 'top',
+        color: 'danger',
+        duration: 4000,
+        message: err.message
+      });
+      toast.present();
     })
   }
 
