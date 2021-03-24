@@ -1,0 +1,94 @@
+img{
+  clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
+}
+ion-item{
+padding: 0 2rem;
+}
+ion-label{
+  font-size: 1rem !important;
+  text-transform: uppercase;
+  font-weight: bold;
+  --color:#b3b3b3 !important;
+}
+.img{
+  position: relative;
+  margin-bottom: 2rem;
+}
+.round{
+  font-weight: bold;
+  position: absolute;
+  left: 50%; 
+  transform: translate(-50%);
+  font-size: 1.1rem;
+  bottom: -1.2rem;
+  width: 6rem;
+  height: 6rem;
+  color:#fff;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  border: 8px solid #fff;
+  background-color: rgba(0, 0, 0, 0.304);
+  border-radius: 50%;
+}
+.buttons{
+  margin-top: 5rem;
+  padding: 0 2rem;
+}
+h2{
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.login-text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  ion-button{
+    height: 1rem;
+    padding: 0;
+  }
+}
+
+.flip-container {
+  perspective: 1000px;
+}
+ 
+.flip-container.flip .flipper {
+  transform: rotateY(180deg);
+}
+ 
+.flip-container,
+.front,
+.back {
+  width: 100%;
+  height: 500px;
+}
+ 
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+ 
+  position: relative;
+}
+ 
+/* hide back of pane during swap */
+.front,
+.back {
+  backface-visibility: hidden;
+ 
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+ 
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+}
+ 
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(180deg);
+}
