@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AngularFireAuthGuard, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
+import { TypeGuard } from './guards/type.guard';
 
 const redirectUnauthUser = () => redirectUnauthorizedTo(['/'])
 
@@ -16,9 +17,10 @@ const routes: Routes = [
   },
   {
     path: 'buyer',
-    canActivate: [AngularFireAuthGuard],
+    canActivate: [AngularFireAuthGuard, TypeGuard],
     data: {
-      authGuardPipe: redirectUnauthUser
+      authGuardPipe: redirectUnauthUser,
+      type: 'BUYER'
     },
     children: [
       {
@@ -38,9 +40,10 @@ const routes: Routes = [
   },
   {
     path: 'seller',
-    canActivate: [AngularFireAuthGuard],
+    canActivate: [AngularFireAuthGuard, TypeGuard],
     data: {
-      authGuardPipe: redirectUnauthUser
+      authGuardPipe: redirectUnauthUser,
+      type: 'SELLER'
     },
     children: [
       {

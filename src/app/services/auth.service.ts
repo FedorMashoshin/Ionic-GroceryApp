@@ -13,13 +13,24 @@ import { switchMap } from 'rxjs/operators'
   providedIn: 'root'
 })
 export class AuthService {
+  user: Observable<any>; 
   
   constructor(
     private angularFireAuth: AngularFireAuth,
     private angularFireStore: AngularFirestore,
     private navCtrl: NavController
   )
-   { }
+   { 
+     this.user = this.angularFireAuth.authState.pipe(
+      switchMap(user => {
+        if (user) {
+          return this.angularFireStore.doc(`users/${user.uid}`).valueChanges();
+        } else {
+          return of(null);
+        }
+      })
+     )
+   }
 
    signIn(credentials): Observable<any>{
     //  By default return promise. We change it to return observable
