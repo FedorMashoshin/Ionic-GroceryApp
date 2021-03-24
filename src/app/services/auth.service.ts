@@ -3,6 +3,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
 import * as firebase from '@firebase/app';
 import '@firebase/firestore';
+import { NavController } from '@ionic/angular';
 import { from, Observable, of } from 'rxjs';
 import { switchMap } from 'rxjs/operators'
 
@@ -15,7 +16,8 @@ export class AuthService {
   
   constructor(
     private angularFireAuth: AngularFireAuth,
-    private angularFireStore: AngularFirestore
+    private angularFireStore: AngularFirestore,
+    private navCtrl: NavController
   )
    { }
 
@@ -41,6 +43,12 @@ export class AuthService {
          type: credentials.type,
          created: firebase.firebase.firestore.FieldValue.serverTimestamp()
        })
+     })
+   }
+
+   signOut(){
+     this.angularFireAuth.signOut().then(() => {
+      this.navCtrl.navigateRoot('/')
      })
    }
 }
