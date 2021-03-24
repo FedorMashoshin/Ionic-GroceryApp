@@ -1,8 +1,5 @@
-img{
-  clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
-}
 ion-item{
-padding: 0 2rem;
+  padding: 0 2rem;
 }
 ion-label{
   font-size: 1rem !important;
@@ -10,85 +7,79 @@ ion-label{
   font-weight: bold;
   --color:#b3b3b3 !important;
 }
-.img{
-  position: relative;
-  margin-bottom: 2rem;
-}
-.round{
-  font-weight: bold;
-  position: absolute;
-  left: 50%; 
-  transform: translate(-50%);
-  font-size: 1.1rem;
-  bottom: -1.2rem;
-  width: 6rem;
-  height: 6rem;
-  color:#fff;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  border: 8px solid #fff;
-  background-color: rgba(0, 0, 0, 0.304);
-  border-radius: 50%;
-}
-.buttons{
-  margin-top: 5rem;
-  padding: 0 2rem;
-}
-h2{
-  text-align: center;
-  margin-bottom: 2rem;
-}
 
-.login-text{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  ion-button{
-    height: 1rem;
-    padding: 0;
+.login{
+  &__img--box{
+    position: relative;
+    margin-bottom: 2rem;
+    &-img{
+      clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
+    }
+    &-label{
+      font-weight: bold;
+      position: absolute;
+      left: 50%; 
+      transform: translate(-50%);
+      font-size: 1.1rem;
+      bottom: -1.2rem;
+      width: 6rem;
+      height: 6rem;
+      color:#fff;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      border: 8px solid #fff;
+      background-color: rgba(0, 0, 0, 0.304);
+      border-radius: 50%;
+    }
+  }
+  &__buttons{
+    margin-top: 5rem;
+    padding: 0 2rem;
+  }
+  &__header{
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  &__text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
-.flip-container {
-  perspective: 1000px;
-}
- 
-.flip-container.flip .flipper {
+// FLIP CARD EFFECT
+.login__flip{
+  &--container {
+    perspective: 1000px;
+    width: 100%;
+    height: 500px;
+  }
+  &--container.flip 
+  &--flipper {
   transform: rotateY(180deg);
-}
- 
-.flip-container,
-.front,
-.back {
-  width: 100%;
-  height: 500px;
-}
- 
-/* flip speed goes here */
-.flipper {
-  transition: 0.6s;
-  transform-style: preserve-3d;
- 
-  position: relative;
-}
- 
-/* hide back of pane during swap */
-.front,
-.back {
-  backface-visibility: hidden;
- 
-  position: absolute;
-  top: 0;
-  left: 0;
-}
- 
-/* front pane, placed above back */
-.front {
-  z-index: 2;
-}
- 
-/* back, initially hidden pane */
-.back {
-  transform: rotateY(180deg);
+  &-front,
+  &-back {
+    width: 100%;
+    height: 500px;
+  }
+  } 
+  &--flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+    &-front,
+    &-back {
+      backface-visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &-front {
+      z-index: 2;
+    }
+    &-back {
+      transform: rotateY(180deg);
+    }
+  }
 }
