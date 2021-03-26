@@ -1,9 +1,30 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>sellerListDetails</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="seller/list"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Create Product</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <form [formGroup]="productForm" (ngSubmit)="createProduct()">
+    <ion-item lines="full">
+      <ion-label position="stacked"> Name </ion-label>
+      <ion-input formControlName="name"></ion-input>
+    </ion-item>
 
+    <ion-item lines="full">
+      <ion-label position="stacked"> Price </ion-label>
+      <ion-input formControlName="price"></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="stacked"> Description </ion-label>
+      <ion-textarea formControlName="description" rows="6"></ion-textarea>
+    </ion-item>
+
+    <ion-button expand="block" type="submit">Create Product</ion-button>
+
+  </form>
 </ion-content>

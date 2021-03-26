@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-seller-list-details',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SellerListDetailsPage implements OnInit {
 
-  constructor() { }
+  productForm: FormGroup;
+
+  constructor(
+    private formBuilder: FormBuilder
+  ) { }
 
   ngOnInit() {
+    this.productForm = this.formBuilder.group({
+      name: ['', Validators.required],
+      price: ['', Validators.required],
+      description: ['', Validators.required],
+      img: ''
+    })
   }
+
+  createProduct(){}
 
 }
