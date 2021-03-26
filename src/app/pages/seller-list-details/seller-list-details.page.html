@@ -1,5 +1,5 @@
-<ion-header>
-  <ion-toolbar>
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary" >
     <ion-buttons slot="start">
       <ion-back-button defaultHref="seller/list"></ion-back-button>
     </ion-buttons>
@@ -9,6 +9,12 @@
 
 <ion-content>
   <form [formGroup]="productForm" (ngSubmit)="createProduct()">
+    <div class="login__img--box">
+      <img class="login__img--box-img" src="https://i.pinimg.com/originals/2d/b8/18/2db818297d1cac3289cf34537d988856.png" alt="">
+      <div class="login__img--box-label">
+        Online Grocery
+      </div>
+    </div>
     <ion-item lines="full">
       <ion-label position="stacked"> Name </ion-label>
       <ion-input formControlName="name"></ion-input>
@@ -16,7 +22,7 @@
 
     <ion-item lines="full">
       <ion-label position="stacked"> Price </ion-label>
-      <ion-input formControlName="price"></ion-input>
+      <ion-input type="number" formControlName="price"></ion-input>
     </ion-item>
 
     <ion-item lines="full">
@@ -24,7 +30,7 @@
       <ion-textarea formControlName="description" rows="6"></ion-textarea>
     </ion-item>
 
-    <ion-button expand="block" type="submit">Create Product</ion-button>
+    <ion-button [disabled]="!productForm.valid" class="login__buttons" expand="block" type="submit">Create Product</ion-button>
 
   </form>
 </ion-content>
