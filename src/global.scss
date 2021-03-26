@@ -25,6 +25,12 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
+ion-content, ion-button, ion-label, ion-input{
+  font-family: 'Exo 2', sans-serif !important;
+}
+ion-button{
+  text-transform: uppercase;
+}
 
 ion-label{
   text-transform: uppercase;
