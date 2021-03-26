@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { NavController } from '@ionic/angular';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-seller-list-details',
@@ -11,7 +13,9 @@ export class SellerListDetailsPage implements OnInit {
   productForm: FormGroup;
 
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private productService: ProductService,
+    private navCtrl: NavController
   ) { }
 
   ngOnInit() {
@@ -23,6 +27,9 @@ export class SellerListDetailsPage implements OnInit {
     })
   }
 
-  createProduct(){}
-
+  createProduct(){
+    this.productService.addProduct(this.productForm.value).then(res => {
+      this.navCtrl.navigateBack('/seller/list');
+    })
+  }
 }
