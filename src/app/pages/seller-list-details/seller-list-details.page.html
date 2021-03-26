@@ -9,9 +9,9 @@
 
 <ion-content>
   <form [formGroup]="productForm" (ngSubmit)="createProduct()">
-    <div class="login__img--box">
-      <img class="login__img--box-img" src="https://i.pinimg.com/originals/2d/b8/18/2db818297d1cac3289cf34537d988856.png" alt="">
-      <div class="login__img--box-label">
+    <div class="form__img--box">
+      <img class="form__img--box-img form__img--box-img-create" src="https://i.pinimg.com/originals/2d/b8/18/2db818297d1cac3289cf34537d988856.png" alt="">
+      <div class="form__img--box-label form__img--box-label-create">
         Online Grocery
       </div>
     </div>
@@ -30,7 +30,7 @@
       <ion-textarea formControlName="description" rows="6"></ion-textarea>
     </ion-item>
 
-    <ion-button [disabled]="!productForm.valid" class="login__buttons" expand="block" type="submit">Create Product</ion-button>
+    <ion-button [disabled]="!productForm.valid" class="form__buttons" expand="block" type="submit">Create Product</ion-button>
 
   </form>
 </ion-content>

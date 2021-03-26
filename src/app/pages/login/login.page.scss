@@ -1,53 +1,6 @@
 ion-item{
   padding: 0 2rem;
 }
-ion-label{
-  text-transform: uppercase;
-  font-weight: bold;
-  color:#b3b3b3 !important;
-}
-
-.login{
-  &__img--box{
-    position: relative;
-    margin-bottom: 2rem;
-    &-img{
-      clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
-    }
-    &-label{
-      font-weight: bold;
-      position: absolute;
-      left: 50%; 
-      transform: translate(-50%);
-      font-size: 1.1rem;
-      bottom: -1.2rem;
-      width: 6rem;
-      height: 6rem;
-      color:#fff;
-      display: flex;
-      text-align: center;
-      align-items: center;
-      border: 8px solid #fff;
-      background-color: rgba(0, 0, 0, 0.304);
-      border-radius: 50%;
-    }
-  }
-  &__buttons{
-    font-weight: lighter;
-    margin-top: 5rem;
-    padding: 0 2rem;
-  }
-  &__header{
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  &__text{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
 // FLIP CARD EFFECT
 .login__flip{
   &--container {

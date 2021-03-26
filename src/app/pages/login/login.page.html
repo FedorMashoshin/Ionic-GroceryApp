@@ -3,13 +3,13 @@
     <div class="login__flip--flipper">
       <div class="login__flip--flipper-front">
         <form [formGroup]="loginForm" (ngSubmit)="login()">
-          <div class="login__img--box">
-            <img class="login__img--box-img" src="https://cdn.gobankingrates.com/wp-content/uploads/2019/03/fresh-produce-in-grocery-bag-iStock-936387810.jpg" alt="">
-            <div class="login__img--box-label">
+          <div class="form__img--box">
+            <img class="form__img--box-img" src="https://cdn.gobankingrates.com/wp-content/uploads/2019/03/fresh-produce-in-grocery-bag-iStock-936387810.jpg" alt="">
+            <div class="form__img--box-label">
               Online Grocery
             </div>
           </div>
-          <h2 class="login__header">Log In</h2>
+          <h2 class="form__header">Log In</h2>
           <ion-item lines="full">
               <ion-label position="stacked">
                 Email
@@ -25,12 +25,12 @@
             <ion-input type="password" formControlName="password"></ion-input>
           </ion-item>
       
-         <div class="login__buttons">
+         <div class="form__buttons">
           <ion-button expand="block" type="submit" [disabled]="!loginForm.valid">
             Login
           </ion-button>
       
-          <div class="login__text">
+          <div class="form__text">
             Don'have an account yet?
           <ion-button expand="block" type="button" color="secondary" fill="clear" (click)="toggleRegister()">
             Register
@@ -41,13 +41,13 @@
       </div>
       <div class="login__flip--flipper-back">
         <form [formGroup]="registerForm" (ngSubmit)="register()">
-          <div class="login__img--box">
-            <img class="login__img--box-img" src="https://cdn.gobankingrates.com/wp-content/uploads/2019/03/fresh-produce-in-grocery-bag-iStock-936387810.jpg" alt="">
-            <div class="login__img--box-label">
+          <div class="form__img--box">
+            <img class="form__img--box-img" src="https://cdn.gobankingrates.com/wp-content/uploads/2019/03/fresh-produce-in-grocery-bag-iStock-936387810.jpg" alt="">
+            <div class="form__img--box-label">
               Online Grocery
             </div>
           </div>
-          <h2 class="login__header">Register new user</h2>
+          <h2 class="form__header">Register new user</h2>
           <ion-item lines="full">
               <ion-label position="stacked">
                 Email
@@ -78,12 +78,12 @@
             </ion-select>
           </ion-item>
       
-         <div class="login__buttons">
+         <div class="form__buttons">
           <ion-button expand="block" type="submit" [disabled]="!registerForm.valid">
             Register
           </ion-button>
       
-          <div class="login__text">
+          <div class="form__text">
             Already have an account?
           <ion-button expand="block" type="button" color="secondary" fill="clear" (click)="toggleRegister()">
             Login
