@@ -9,10 +9,10 @@ export class ProductService {
 
   constructor(
     private angularFireStore: AngularFirestore,
-    private angularFireAuth: AngularFireAuth
+    private angularFireAuth: AngularFireAuth,
   ) { }
 
-  async addProduct(product){
+  public async addProduct(product){
     product.creator = (await this.angularFireAuth.currentUser).uid
     return this.angularFireStore.collection('products').add(product);
   }

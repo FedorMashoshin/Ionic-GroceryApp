@@ -1,0 +1,23 @@
+.form__product--img{
+  z-index: -2;
+  clip-path: polygon(50% -3%, 100% 15%, 100% 100%, 0 100%, 0 15%);
+  margin-top: -3.5rem;
+  height: 200px;
+  background: #ffe6e3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ 
+  ion-button {
+    margin-top: 0;
+  }
+ 
+  img {
+    margin-top: 4 0px;
+    margin-bottom: 20px;
+    height: 200px;
+    width: auto;
+    object-fit: contain;
+  }
+}

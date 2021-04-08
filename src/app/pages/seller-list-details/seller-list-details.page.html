@@ -15,6 +15,12 @@
         Online Grocery
       </div>
     </div>
+    <div class="form__product--img">
+      <img [src]="productImageBase64" *ngIf="productImageBase64" alt="Product Img">
+      <ion-button class="form__buttons ion-margin-bottom" type="button" expand="block" fill="outline" (click)="selectImage()">
+        Upload product image
+      </ion-button>
+    </div>
     <ion-item lines="full">
       <ion-label position="stacked"> Name </ion-label>
       <ion-input formControlName="name"></ion-input>

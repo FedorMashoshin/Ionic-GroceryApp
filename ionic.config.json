@@ -1,5 +1,7 @@
 {
   "name": "GroceryApp",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

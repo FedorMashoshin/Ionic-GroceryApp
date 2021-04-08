@@ -40,6 +40,7 @@ ion-label{
 
 .form{
   &__img--box{
+    z-index: 100;
     position: relative;
     margin-bottom: 2rem;
     &-img{
