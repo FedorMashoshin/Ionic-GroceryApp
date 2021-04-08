@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireStorage, AngularFireStorageReference } from '@angular/fire/storage';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -35,5 +36,21 @@ export class ProductService {
       console.log('URL: ', imageUrl);
       return this.angularFireStore.doc(`products/${documentId}`).update({ img: imageUrl });
     });
+  }
+
+  async getSellerProduct(){
+    const id = (await this.angularFireAuth.currentUser).uid;
+    return this.angularFireStore.collection('products', ref => ref.where('creator', '==', id)).snapshotChanges().pipe(
+      map(actions => actions.map(a => {
+        const data = a.payload.doc.data();
+        const id = a.payload.doc.id;
+        return { id, data }
+      }))
+    )
+  }
+
+  deleteProduct(id) {
+    this.angularFireStore.doc(`products/${id}`).delete();
+    this.storage.ref(`products/${id}`).delete().subscribe(res => {});
   }
 }
