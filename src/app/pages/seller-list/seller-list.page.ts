@@ -2,6 +2,7 @@ import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import { ProductService } from 'src/app/services/product.service';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-seller-list',
@@ -13,7 +14,8 @@ export class SellerListPage implements OnInit {
 
   constructor(
     private authService: AuthService,
-    private productService: ProductService
+    private productService: ProductService,
+    private alertCtrl: AlertController
   ) { }
 
   async ngOnInit() {
@@ -23,8 +25,23 @@ export class SellerListPage implements OnInit {
    });
   }
 
-  delete(id) {
-    this.productService.deleteProduct(id);
+  async delete(id) {
+    const alert = await this.alertCtrl.create({
+      header: 'Are you sure you want to delete this item?',
+      buttons: [
+        {
+          text: 'No',
+          role: 'cancel',
+        }, {
+          text: 'Delete',
+          handler: () => {
+            this.productService.deleteProduct(id);
+          }
+        }
+      ]
+    });
+
+    await alert.present();
   }
 
   signOut(){

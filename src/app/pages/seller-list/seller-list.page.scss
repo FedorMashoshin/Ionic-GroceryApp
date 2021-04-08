@@ -1,0 +1,28 @@
+ion-content{
+  --background: url('https://www.kolpaper.com/wp-content/uploads/2020/06/Iphone-Blueberries-Wallpaper.jpg');
+}
+.seller__card{
+  height: 100px;
+  display: flex;
+  &--image{
+    width: 30%;
+  }
+  &--box{
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    &-left{
+      display: flex;
+      flex-direction: column;
+      &-header{
+        font-size: 1.2rem;
+        margin-bottom: 0.4rem;
+      }
+      &-price{
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
