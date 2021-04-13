@@ -15,6 +15,20 @@ export class ProductService {
     private storage: AngularFireStorage
   ) { }
 
+  public getAllProducts(){
+    return this.angularFireStore.collection('products').snapshotChanges().pipe(
+      map(actions => actions.map(a => {
+        const data = a.payload.doc.data();
+        const id = a.payload.doc.id;
+        return { id, data }
+      }))
+    )
+  }
+
+  public getOneProduct(id){
+    return this.angularFireStore.doc(`products/${id}`).valueChanges();
+  }
+
   public async addProduct(product){
     product.creator = (await this.angularFireAuth.currentUser).uid;
     const imageData = product.img;
@@ -38,7 +52,7 @@ export class ProductService {
     });
   }
 
-  async getSellerProduct(){
+  public async getSellerProduct(){
     const id = (await this.angularFireAuth.currentUser).uid;
     return this.angularFireStore.collection('products', ref => ref.where('creator', '==', id)).snapshotChanges().pipe(
       map(actions => actions.map(a => {
@@ -49,7 +63,7 @@ export class ProductService {
     )
   }
 
-  deleteProduct(id) {
+  public deleteProduct(id): void{
     this.angularFireStore.doc(`products/${id}`).delete();
     this.storage.ref(`products/${id}`).delete().subscribe(res => {});
   }

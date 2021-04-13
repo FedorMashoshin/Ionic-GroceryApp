@@ -10,5 +10,13 @@
 </ion-header>
 
 <ion-content>
-
+  <ion-card class="seller__card" *ngFor="let product of products">
+    <img class="seller__card--image"*ngIf="product.data.img" [src]="product.data.img" alt="">
+      <div class="seller__card--box">
+        <div class="seller__card--box-left">
+          <span class="seller__card--box-left-header">{{ product.data.name | uppercase}}</span>
+          <span class="seller__card--box-left-price">{{ product.data.price | currency:'USD'}}</span>
+        </div>
+    </div>
+</ion-card>
 </ion-content>
