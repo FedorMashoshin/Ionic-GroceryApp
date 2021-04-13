@@ -2,6 +2,9 @@ ion-content{
   --background: url('https://www.kolpaper.com/wp-content/uploads/2020/06/Iphone-Blueberries-Wallpaper.jpg');
 }
 .seller__card{
+  background-color: #fff;
+  margin: 1rem;
+  border-radius: 10px;
   height: 100px;
   display: flex;
   &--image{

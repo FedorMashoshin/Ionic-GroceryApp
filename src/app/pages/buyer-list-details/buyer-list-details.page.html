@@ -1,9 +1,12 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>buyerListDetails</ion-title>
+    <ion-title>{{ product?.name }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+<img [src]="product?.img" alt="">
+<h2>{{ product?.name }}</h2>
+<p>{{ product?.description }}</p>
+<p>{{ product?.price | currency: 'USD'}}</p>
 </ion-content>
