@@ -32,7 +32,7 @@ class CameraMock extends Camera {
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFirestoreModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
     ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },   

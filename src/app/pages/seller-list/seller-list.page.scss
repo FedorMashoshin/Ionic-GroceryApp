@@ -5,14 +5,15 @@ ion-content{
   height: 100px;
   display: flex;
   &--image{
-    width: 30%;
+    padding: .5rem;
+    width: 25%;
   }
   &--box{
     padding: 0 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 70%;
+    width: 75%;
     &-left{
       display: flex;
       flex-direction: column;
