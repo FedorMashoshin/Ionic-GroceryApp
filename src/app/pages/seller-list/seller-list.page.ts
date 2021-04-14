@@ -11,6 +11,7 @@ import { AlertController } from '@ionic/angular';
 })
 export class SellerListPage implements OnInit {
   products;
+  user: any;
 
   constructor(
     private authService: AuthService,
@@ -19,6 +20,10 @@ export class SellerListPage implements OnInit {
   ) { }
 
   async ngOnInit() {
+    this.authService.user.subscribe(res => {
+      this.user = res;
+    });
+
    (await this.productService.getSellerProduct()).subscribe(data => {
      this.products =  data;
      console.log(this.products);
