@@ -49,6 +49,11 @@ export class SellerListDetailsPage implements OnInit {
       console.log(data);
       this.productImageBase64 = 'data:image/jpeg;base64,' + data;
       this.productForm.patchValue({ img: data })
-    });
+    },
+     (err) => {
+       this.productImageBase64 = `https://st4.depositphotos.com/14953852/24787/v/600/depositphotos_247872612-stock-illustration-no-image-available-icon-vector.jpg`;
+       this.productForm.patchValue({ img: this.productImageBase64 })
+       console.warn(this.productForm);
+     });
   }
 }

@@ -11,15 +11,15 @@
   <form [formGroup]="productForm" (ngSubmit)="createProduct()">
     <div class="form__img--box">
       <img class="form__img--box-img form__img--box-img-create" src="https://i.pinimg.com/originals/2d/b8/18/2db818297d1cac3289cf34537d988856.png" alt="">
-      <div class="form__img--box-label form__img--box-label-create">
-        Online Grocery
+      <div class="form__img--box-label form__img--box-label-create" (click)="selectImage()">
+        Upload Picture
       </div>
     </div>
     <div class="form__product--img">
       <img [src]="productImageBase64" *ngIf="productImageBase64" alt="Product Img">
-      <ion-button class="form__buttons ion-margin-bottom" type="button" expand="block" fill="outline" (click)="selectImage()">
+      <!-- <ion-button class="form__buttons ion-margin-bottom" type="button" expand="block" fill="outline" (click)="selectImage()">
         Upload product image
-      </ion-button>
+      </ion-button> -->
     </div>
     <ion-item lines="full">
       <ion-label position="stacked"> Name </ion-label>

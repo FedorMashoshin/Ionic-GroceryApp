@@ -46,7 +46,7 @@ BuyerListPageRoutingModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decora
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-button (click)=\"signOut()\">\n        <ion-icon name=\"log-out-outline\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n    <ion-title>Buy products</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n\n</ion-content>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-button (click)=\"signOut()\">\n        <ion-icon name=\"log-out-outline\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n    <ion-title>Buy products</ion-title>\n    <span>Hello {{ user?.name }}</span>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <div class=\"seller__card\" *ngFor=\"let product of products\" [routerLink]=\"[product.id]\">\n    <img class=\"seller__card--image\"*ngIf=\"product.data.img\" [src]=\"product.data.img\" alt=\"\">\n      <div class=\"seller__card--box\">\n        <div class=\"seller__card--box-left\">\n          <span class=\"seller__card--box-left-header\">{{ product.data.name | uppercase}}</span>\n          <span class=\"seller__card--box-left-price\">{{ product.data.price | currency:'USD'}}</span>\n        </div>\n    </div>\n</div>\n</ion-content>\n");
 
 /***/ }),
 
@@ -65,23 +65,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _buyer_list_page_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./buyer-list.page.scss */ "dY9s");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
 /* harmony import */ var src_app_services_auth_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/services/auth.service */ "lGQG");
+/* harmony import */ var src_app_services_product_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/services/product.service */ "Gdn9");
+
 
 
 
 
 
 let BuyerListPage = class BuyerListPage {
-    constructor(authService) {
+    constructor(authService, productService) {
         this.authService = authService;
+        this.productService = productService;
     }
     ngOnInit() {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            this.authService.user.subscribe(res => {
+                this.user = res;
+            });
+            this.productService.getAllProducts().subscribe(res => {
+                this.products = res;
+            });
+        });
     }
     signOut() {
         return this.authService.signOut();
     }
 };
 BuyerListPage.ctorParameters = () => [
-    { type: src_app_services_auth_service__WEBPACK_IMPORTED_MODULE_4__["AuthService"] }
+    { type: src_app_services_auth_service__WEBPACK_IMPORTED_MODULE_4__["AuthService"] },
+    { type: src_app_services_product_service__WEBPACK_IMPORTED_MODULE_5__["ProductService"] }
 ];
 BuyerListPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
@@ -104,7 +116,7 @@ BuyerListPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJidXllci1saXN0LnBhZ2Uuc2NzcyJ9 */");
+/* harmony default export */ __webpack_exports__["default"] = ("ion-content {\n  --background: url(\"https://www.kolpaper.com/wp-content/uploads/2020/06/Iphone-Blueberries-Wallpaper.jpg\");\n}\n\n.seller__card {\n  background-color: #fff;\n  margin: 1rem;\n  border-radius: 10px;\n  height: 100px;\n  display: flex;\n}\n\n.seller__card--image {\n  padding: 0.5rem;\n  width: 25%;\n}\n\n.seller__card--box {\n  padding: 0 1rem;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  width: 75%;\n}\n\n.seller__card--box-left {\n  display: flex;\n  flex-direction: column;\n}\n\n.seller__card--box-left-header {\n  font-size: 1.2rem;\n  margin-bottom: 0.4rem;\n}\n\n.seller__card--box-left-price {\n  font-size: 1.1rem;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL2J1eWVyLWxpc3QucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UseUdBQUE7QUFDRjs7QUFDQTtFQUNFLHNCQUFBO0VBQ0EsWUFBQTtFQUNBLG1CQUFBO0VBQ0EsYUFBQTtFQUNBLGFBQUE7QUFFRjs7QUFERTtFQUNFLGVBQUE7RUFDQSxVQUFBO0FBR0o7O0FBREU7RUFDRSxlQUFBO0VBQ0EsYUFBQTtFQUNBLG1CQUFBO0VBQ0EsOEJBQUE7RUFDQSxVQUFBO0FBR0o7O0FBRkk7RUFDRSxhQUFBO0VBQ0Esc0JBQUE7QUFJTjs7QUFITTtFQUNFLGlCQUFBO0VBQ0EscUJBQUE7QUFLUjs7QUFITTtFQUNFLGlCQUFBO0FBS1IiLCJmaWxlIjoiYnV5ZXItbGlzdC5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJpb24tY29udGVudHtcbiAgLS1iYWNrZ3JvdW5kOiB1cmwoJ2h0dHBzOi8vd3d3LmtvbHBhcGVyLmNvbS93cC1jb250ZW50L3VwbG9hZHMvMjAyMC8wNi9JcGhvbmUtQmx1ZWJlcnJpZXMtV2FsbHBhcGVyLmpwZycpO1xufVxuLnNlbGxlcl9fY2FyZHtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgbWFyZ2luOiAxcmVtO1xuICBib3JkZXItcmFkaXVzOiAxMHB4O1xuICBoZWlnaHQ6IDEwMHB4O1xuICBkaXNwbGF5OiBmbGV4O1xuICAmLS1pbWFnZXtcbiAgICBwYWRkaW5nOiAuNXJlbTtcbiAgICB3aWR0aDogMjUlO1xuICB9XG4gICYtLWJveHtcbiAgICBwYWRkaW5nOiAwIDFyZW07XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgICB3aWR0aDogNzUlO1xuICAgICYtbGVmdHtcbiAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgICAgJi1oZWFkZXJ7XG4gICAgICAgIGZvbnQtc2l6ZTogMS4ycmVtO1xuICAgICAgICBtYXJnaW4tYm90dG9tOiAwLjRyZW07XG4gICAgICB9XG4gICAgICAmLXByaWNle1xuICAgICAgICBmb250LXNpemU6IDEuMXJlbTtcbiAgICAgIH1cbiAgICB9XG4gIH1cbn0iXX0= */");
 
 /***/ }),
 

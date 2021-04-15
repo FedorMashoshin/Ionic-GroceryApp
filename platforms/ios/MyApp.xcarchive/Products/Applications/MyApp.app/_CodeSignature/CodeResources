@@ -18,11 +18,11 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/objects-13.0+.nib</key>
 		<data>
-		1HMpqac7+jtWXjcaml6PfKpT6Xs=
+		OCaZddyQ2vpO/H9qS2hlfQrcD2E=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/runtime.nib</key>
 		<data>
-		Xx9muMXEX45FCVoMq6klsTJqTfA=
+		jo7HGwwIewhYrlKU3IwQcJse3pQ=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -30,19 +30,19 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib/objects-13.0+.nib</key>
 		<data>
-		OCAR5qSYMw8tGZ6h5kCXRbE+rc0=
+		gg+lvg343m2hPg04bXtK5FiOUOs=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib/runtime.nib</key>
 		<data>
-		P5tKmCXonMEtTlb+juPn0gxiN84=
+		nRSde6FGfZa0L9qggDrDtAXjjlA=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ptuxW17mh6FmqUwFyDuqQk5ZWOo=
+		HuNCuBgLOheUr9j9mzYx9Da0mYM=
 		</data>
 		<key>MainViewController.nib</key>
 		<data>
-		VesJLtw9qMCvif3bmJPMMUDFoHU=
+		2HPtTtUy/SJjVXu6zVrQF/8M0us=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>config.xml</key>
 		<data>
-		Jm/47JNHy7ukT6GL+E43s2pLQQk=
+		Ag7UFcpGya/8B0SvQ/vrTy8s+7A=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
-		Gp6VNiNmqnl+edz96OU0fvfVnxA=
+		ALx6C2CbAIj2yhrvxMV9lkS/H/o=
 		</data>
 		<key>www/0-es2015.js</key>
 		<data>
@@ -748,25 +748,29 @@
 		<data>
 		d5i44Oth1zdcJFr3i79ckWkyvxM=
 		</data>
+		<key>www/assets/img.jpeg</key>
+		<data>
+		9L/gj5wzpo+btQOqqHLFnf+vxtQ=
+		</data>
 		<key>www/assets/shapes.svg</key>
 		<data>
 		VBPpWtq8sstjmXAFH1Xg3bZKzlM=
 		</data>
 		<key>www/common-es2015.js</key>
 		<data>
-		sgaZ9sQ2Ov9Zc1EKw5eAZ8x45DE=
+		4y45x+0yBemJuNhliXcFtXeis+g=
 		</data>
 		<key>www/common-es2015.js.map</key>
 		<data>
-		eve8Bh9Tm4yCLnsTdPN28ZYQDH4=
+		EjqzyrKa5Uxic28D2LLOpOIIPcI=
 		</data>
 		<key>www/common-es5.js</key>
 		<data>
-		gnXZDEoMeD2K1bGSvJAucbYQNsY=
+		KS9+5TDr6mlPNOfWcxiJ8AOfaC4=
 		</data>
 		<key>www/common-es5.js.map</key>
 		<data>
-		ZDZkgr72HuBiFR9pZOKrAFosthU=
+		ltO6TmSiInZ1XtTy/+8PKMpplLs=
 		</data>
 		<key>www/cordova-js-src/exec.js</key>
 		<data>
@@ -874,51 +878,51 @@
 		</data>
 		<key>www/main-es2015.js</key>
 		<data>
-		vkrvIn4U2rRWcljw7nIE3sVXghg=
+		Vz5XVL+NW7dLRTHe2e7H7qW76GA=
 		</data>
 		<key>www/main-es2015.js.map</key>
 		<data>
-		4rWEt/331e6n2NpjR2AXWLyFVGA=
+		Gt3scXy5AOdZGmJeKmOsqMW7Oq4=
 		</data>
 		<key>www/main-es5.js</key>
 		<data>
-		HGTIEUnUtaVM1XcFOnT0/DR9d1M=
+		5wi3yMI8FXYsph2zNShU3epl8ic=
 		</data>
 		<key>www/main-es5.js.map</key>
 		<data>
-		hWAkjaWA4eeJSox5yaYzFecuVhE=
+		cJFp09HDyHQyvLefQGBKgdJjJoQ=
 		</data>
 		<key>www/pages-buyer-list-buyer-list-module-es2015.js</key>
 		<data>
-		xxx+CPbnVvFj/DzMM+FeAmxKrVg=
+		RF6Fo35iCbVMQtUxWJviRedtoFU=
 		</data>
 		<key>www/pages-buyer-list-buyer-list-module-es2015.js.map</key>
 		<data>
-		F1W+FrB3Q2L2KasLl2MPGxutn1E=
+		4eo0JKF4XsMB9mVS2NQYTOo3C2Y=
 		</data>
 		<key>www/pages-buyer-list-buyer-list-module-es5.js</key>
 		<data>
-		bEi1D+5iRolG9s5/UomymtWg620=
+		SLxMbHpnEhToEKVGzNvH4Ix0Nlo=
 		</data>
 		<key>www/pages-buyer-list-buyer-list-module-es5.js.map</key>
 		<data>
-		BbJqGlWRDkpd3a+JyKF85lz9JpI=
+		V+Ws3zXTnXaQSiGB8SiatLzYVGM=
 		</data>
 		<key>www/pages-buyer-list-details-buyer-list-details-module-es2015.js</key>
 		<data>
-		Hvcs9mOo4BBi34/1+cvDfXhY8tI=
+		Mw7rNHSp/unVTCJBwt69VRo5p54=
 		</data>
 		<key>www/pages-buyer-list-details-buyer-list-details-module-es2015.js.map</key>
 		<data>
-		q+3Rx3n/0v0GAkKX1sbFDTdeS1Y=
+		IbhNilQq8hVN07CEY7GrvSP/3Dk=
 		</data>
 		<key>www/pages-buyer-list-details-buyer-list-details-module-es5.js</key>
 		<data>
-		0VZTpN2bsstQhD6E2n9LOB52XQg=
+		vOwGufEF9zRcIZ9FFdoybVhhGnQ=
 		</data>
 		<key>www/pages-buyer-list-details-buyer-list-details-module-es5.js.map</key>
 		<data>
-		hmheVEC4KjtejMzcMmuJia+RCFo=
+		ffUQIi/rKozSkbfLvCt3Xc6PW6g=
 		</data>
 		<key>www/pages-login-login-module-es2015.js</key>
 		<data>
@@ -938,35 +942,35 @@
 		</data>
 		<key>www/pages-seller-list-details-seller-list-details-module-es2015.js</key>
 		<data>
-		quKy0DeTDX1+rR0UZoQs5yJEqqA=
+		uz1I6310I1eDgjbzQSzNAYnWJhI=
 		</data>
 		<key>www/pages-seller-list-details-seller-list-details-module-es2015.js.map</key>
 		<data>
-		6YAiIBOpk7u4tbM4E5r4TVm1spA=
+		XUSaJZLJZl7MXV5H7GihI+PjqPs=
 		</data>
 		<key>www/pages-seller-list-details-seller-list-details-module-es5.js</key>
 		<data>
-		yuju6lNCDii/hyrF9vh0deeY0Jo=
+		83pBJXLC/Kp96RRdySePEQaYFCg=
 		</data>
 		<key>www/pages-seller-list-details-seller-list-details-module-es5.js.map</key>
 		<data>
-		0NDc+rjokRfEht4qCyZpYADNO6A=
+		preLHGf4Za7cC+ziRIJIobrSAPg=
 		</data>
 		<key>www/pages-seller-list-seller-list-module-es2015.js</key>
 		<data>
-		YAn3IEN5TtcneykPHTfYkH/DlUQ=
+		vgWvG6YsrKFv8mkhoZpNf7gbXu0=
 		</data>
 		<key>www/pages-seller-list-seller-list-module-es2015.js.map</key>
 		<data>
-		PdCNFYOpQgmY691FIvwjqwmRlOU=
+		+foNUlUDx2rXuGsjsMjPnyLNoNI=
 		</data>
 		<key>www/pages-seller-list-seller-list-module-es5.js</key>
 		<data>
-		4nPn2B3AW9jA4kvz0MyTBCYTGks=
+		gzdj2EiyMw6K3r2nqpFTOI8DvdI=
 		</data>
 		<key>www/pages-seller-list-seller-list-module-es5.js.map</key>
 		<data>
-		RGbuM7ttQLeT2FkNLx99TraIEMY=
+		/xo6jZlXLyy49EIYTvorkDa1YXI=
 		</data>
 		<key>www/plugins/cordova-plugin-camera/www/Camera.js</key>
 		<data>
@@ -1074,19 +1078,19 @@
 		</data>
 		<key>www/runtime-es2015.js</key>
 		<data>
-		nOP+1LziVauOc6+xxH8Hm5Z+Fn4=
+		+kZczTgiFDp/eINOzt9O5ep/gvE=
 		</data>
 		<key>www/runtime-es2015.js.map</key>
 		<data>
-		nT+0blGRR6U7VEdwn3SrlSqZcKQ=
+		zhPy3z8+cKe1eRSPmP3wmc2rVhk=
 		</data>
 		<key>www/runtime-es5.js</key>
 		<data>
-		sscz3XstEdo8agq5/Ecua3y4au0=
+		OvHdC2cAESVUulckiZgjJmcSi1Y=
 		</data>
 		<key>www/runtime-es5.js.map</key>
 		<data>
-		Mr3q24CZ02p6qK8QyTEcAIq+z/Y=
+		4CMXWghIPfNngMZ9/VyngAwKW/Q=
 		</data>
 		<key>www/shadow-css-a3f00b33-js-es2015.js</key>
 		<data>
@@ -6552,14 +6556,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZD5yHKiOjIn5O1rbC/cKZfq2vdqm5mCsApvQ4Iq2NkU=
+			Kdh3PtmfdCYmMwllFoWfazZ4gTYu7sUBbhrejzyj/Tc=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			y7Uc/YQ5hId/7yYlCHzilETpINbnB5ax188qM5c5zb4=
+			kxZq9PmQnul1sQ52Ze7+mfBokinr9T/BXUcfdzeqgPY=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
@@ -6573,35 +6577,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			kZ0MS0fjouO+tWIss0gkFuj2EFrXan3NrRgTI663Z4c=
+			bEIHVRznAcRCP1W6GBd8vW5B4D4Bze4KnZ0z/iurzxs=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6uu/Zh9XBZ9AO03GkTeq1vpxBpkYVvZcJqGFkeEGmrQ=
+			P4C+cjBUuSSPH3xhU4QhWzSnR1V6fN25ymIpGLohXnM=
 			</data>
 		</dict>
 		<key>MainViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WrtCO7ADIZ2hjwpnPudfkWr0ZKbNLwHqSEvNiVIe2lk=
+			CvKGPawztoUw6SEbYHWmKHk1fXsmMK58hJutFq8fRTA=
 			</data>
 		</dict>
 		<key>config.xml</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YokgmFZZUX2W9t+J4ntRxkJz6vCD8R2BnHW1c0xcYCA=
+			ipidJn9Gl/U3WYYtJ5NSNDfvrKf0nY46gIAiNxYacYc=
 			</data>
 		</dict>
 		<key>embedded.mobileprovision</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			sa3d2fbp3BuqJ6Zc51PJUAC+3R++ew6qPqJSXtWT16Y=
+			py8/yFI0pfW4wo6rpsdzxG8hb/7adJ/NrdW84HkZ5tE=
 			</data>
 		</dict>
 		<key>www/0-es2015.js</key>
@@ -7815,6 +7819,13 @@
 			6CDbRVYzFq1juFV6PLmmgan1n6+JnCUDkxE/y+iF0s0=
 			</data>
 		</dict>
+		<key>www/assets/img.jpeg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Pu2mXgD6qk4pcWGKjF+EsCyE2qdoYyAy9DyFuzRmiAo=
+			</data>
+		</dict>
 		<key>www/assets/shapes.svg</key>
 		<dict>
 			<key>hash2</key>
@@ -7826,28 +7837,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			e/KhFSXrm6P3YKyuK99Xj6niAzr66eUTEkvg3rXeMXs=
+			0QCjqG+/bxz7IkuoRY5UqDLyDWxI2Oslv8YWF3gBNOw=
 			</data>
 		</dict>
 		<key>www/common-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Dgk6YgxpmFJ2hhhtRLZ4Vo/hzEyZYRLMly//1BFXOaU=
+			225UFXU1qx+ycOJPmAj/QOrAaMLLaiYh9vGEfjSKDbM=
 			</data>
 		</dict>
 		<key>www/common-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RilaRZFI00oPgnvOn9KGVSFBRzezOHbPOuys9/wvm10=
+			bNqDltPanPMIRAx5RMj6I+nJPRS6oCuGluYCjTxQEao=
 			</data>
 		</dict>
 		<key>www/common-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NwdZGyqZgmjGaofMhFc+eKkgtP/bPj7jnmgfn1B4Bco=
+			MXqkBxaW4BpfOs6o+i8Ajyl0eQ1b/+qlTJsgdgySelw=
 			</data>
 		</dict>
 		<key>www/cordova-js-src/exec.js</key>
@@ -8036,84 +8047,84 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jz32auF3JMHQOBcQuMEnqBl4sckpjhnGdWiEgp5CJyE=
+			zAJG4pFBYtsxgmzwidZVK+T+diVAt/OakjmRQkBjKrg=
 			</data>
 		</dict>
 		<key>www/main-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PTBWrXwMiNDPDcacbQ5kRDTSoKlxO/cdRYzdreIwrro=
+			M1btkM3cgxiiJsgEKAialkD8K7lx/dBcOaJxJEVVHIs=
 			</data>
 		</dict>
 		<key>www/main-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			TIPuBsrU6Oj5m+k+XludXBCB/p7NIQx8O0/x6CyQMVc=
+			+jV3tJUH7unUR3PZiYKge6a68ghgLc+4is4I5s3PHTs=
 			</data>
 		</dict>
 		<key>www/main-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CSzmDlKTpYTuLzl+VSBIgjpjyJ1t27/E1jK36kdiaYc=
+			IestspYh4YAD7ntswoGOLIcmwAZO6CrbYl7SZOEt0lY=
 			</data>
 		</dict>
 		<key>www/pages-buyer-list-buyer-list-module-es2015.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XZ/OLvDZv/WsyHUJdkL3Uw4veCfFGv5JfF7jpESenz0=
+			g2Im6R5RIyDUrSFyUKzC8CdO45187u+IQx9lADqnYVk=
 			</data>
 		</dict>
 		<key>www/pages-buyer-list-buyer-list-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zdzyvM2WEzvsc4zy4DmTXl2B7wR99dOlAquKWrpswcA=
+			48QUkvxTF08E2zfa/hD4ut4mPX1Iml0Y3P2UTgbu7dw=
 			</data>
 		</dict>
 		<key>www/pages-buyer-list-buyer-list-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			a03exo4apA5uWB6Ej86ktU0g8M1fwSDWpTXcjAYlWWc=
+			X6nPgsX/K6GMTb5z1ZzTqx3g6iVlnWpm5RgAxONOIO8=
 			</data>
 		</dict>
 		<key>www/pages-buyer-list-buyer-list-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kvKW9feugSroX/kZ8SNWcBgDxWNLpCVU0Sjmrghc5bk=
+			y+QeytI9EieAK+7SFnqnNnumUwS9YdeuQmDDpsaY4oc=
 			</data>
 		</dict>
 		<key>www/pages-buyer-list-details-buyer-list-details-module-es2015.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			BxGtnVkP8d3Fnp5+n+XYJK3x9tBiKapeddio1FwYBqY=
+			YebzulXSyMJ8vY6vRZLWVEowfJx2Y+EbA1aHAdQ5vIA=
 			</data>
 		</dict>
 		<key>www/pages-buyer-list-details-buyer-list-details-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Mq1LRQ5rPFqMfHccHPeE8k1/4TkG9AjVZE5JiCzcvPU=
+			+8g5w+A4NfXv+2prtmajZgJ18b+iEmyQPpmmp4vZS5U=
 			</data>
 		</dict>
 		<key>www/pages-buyer-list-details-buyer-list-details-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			j28FKmDpx0SoUaOHvmAYVjLNXG91zR4lLGaZKDVxVSg=
+			J3F8cn7QEQ/00l8nnCbukRZGRMo8dNlUVADbEuYBlvg=
 			</data>
 		</dict>
 		<key>www/pages-buyer-list-details-buyer-list-details-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			F9QnTIDWZ3pTnL//Fe1XnerW/UefMXq8cOJY9LIAgNw=
+			WhKGzjIJ20dVxJbffcUMoT5AYNiVizn2N6ofHxdHeQA=
 			</data>
 		</dict>
 		<key>www/pages-login-login-module-es2015.js</key>
@@ -8148,56 +8159,56 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9omoq6cZxHU+G+cKhKD5sgtU7MS1y6n/EFfhpc2ZXck=
+			W8Q9/H97yvorRm33H3y2ZsWmSWmjGslbK2ilqYj8Uek=
 			</data>
 		</dict>
 		<key>www/pages-seller-list-details-seller-list-details-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wjW4M41jboIkxJ3bfGeLuKuwQ82F6PnH6fV4cZd2ul8=
+			9wteu24ZEP5epD+76PXXYsDEOB8vprqzoBOa3jZ4bUU=
 			</data>
 		</dict>
 		<key>www/pages-seller-list-details-seller-list-details-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			EQmQsP/Z3wpmCCnKdmT6CrdVDDIEQePJsgKLl5Bq3dQ=
+			ayyky27R4IkLbU4QgfM5DcGC1ZY6X0ShpbYcyK+RzUw=
 			</data>
 		</dict>
 		<key>www/pages-seller-list-details-seller-list-details-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			d+Md5q8Hzf0i1aUEfqIOCIPxSRPGOR9zeAYgTSS6QyA=
+			aouM+GiQMTOhfjUnFJXBj/N1u9ZROxdWChB/8b9Zi2w=
 			</data>
 		</dict>
 		<key>www/pages-seller-list-seller-list-module-es2015.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+RhW3PngY3gvEFGeCR5w605ZA8NZfprAC36Bcvhby/k=
+			cSPi75hZFbNL4D5uVK7/KiBNqneSjtVx6dlPCLnQzv0=
 			</data>
 		</dict>
 		<key>www/pages-seller-list-seller-list-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vVYKSBcolXVrbXCY90tmVD8Jqm3GXlnYpMFUv0QcEMo=
+			Ov+6TAMKIG4hw6mNBGmAKRBSfYEtPVAUXmytb1nNGNY=
 			</data>
 		</dict>
 		<key>www/pages-seller-list-seller-list-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			orVasq33zZ0XyoaW/sc6xIWs+GeRrPq/eBEvH0azwxE=
+			U79RY6dP26jBfcqCuBq3IUaZjkNfz84xLwwbPEj7Jew=
 			</data>
 		</dict>
 		<key>www/pages-seller-list-seller-list-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3KtaDx026kGa24PQ8HcN6J+/5uurIU+6eu7arW6gNLM=
+			NdaYn6MjPUXAgpeknLQ/abeXBm6ucjMdLdqwZqdEMo8=
 			</data>
 		</dict>
 		<key>www/plugins/cordova-plugin-camera/www/Camera.js</key>
@@ -8386,28 +8397,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			HIus8fFCFq/LDnYiJVv0yk/pugBI+QihN1R5E3lPTbQ=
+			C0Q3TzQnHZDh4kVD66/A2Py8xvyvI6x4vsxcLueKWtA=
 			</data>
 		</dict>
 		<key>www/runtime-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uTitgCj1Gc2CwPbptz8CyprabP7CXLdbivm/J8N1GCk=
+			ngUbUaXU4hS47KGkZPjMCZvVMYQe/j1nLIRVtz5ewwQ=
 			</data>
 		</dict>
 		<key>www/runtime-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4Y/TppjrW3IS8ZCbbiU3Rekq4Z0FKQw5aFJrwOwO0fo=
+			TCq/M4Fre7HQz1mkkfB0XlnWBKZls/IMInOmpLRU6LM=
 			</data>
 		</dict>
 		<key>www/runtime-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XkLT7B4W200L3FQkS6yKcKKxWaDzZR3z7PoOxNi3wws=
+			lmOKjiPjGrnJn8xJ4G1sXO4EG9P66NFpgIkoYm+9G7w=
 			</data>
 		</dict>
 		<key>www/shadow-css-a3f00b33-js-es2015.js</key>

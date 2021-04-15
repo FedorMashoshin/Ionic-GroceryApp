@@ -71,7 +71,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/fire/auth */ "UbJi");
 /* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/fire/firestore */ "I/3d");
 /* harmony import */ var _angular_fire_storage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/fire/storage */ "Vaw3");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/operators */ "kU1M");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs */ "qCKp");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs/operators */ "kU1M");
+
 
 
 
@@ -84,6 +86,16 @@ let ProductService = class ProductService {
         this.angularFireAuth = angularFireAuth;
         this.storage = storage;
     }
+    getAllProducts() {
+        return this.angularFireStore.collection('products').snapshotChanges().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["map"])(actions => actions.map(a => {
+            const data = a.payload.doc.data();
+            const id = a.payload.doc.id;
+            return { id, data };
+        })));
+    }
+    getOneProduct(id) {
+        return this.angularFireStore.doc(`products/${id}`).valueChanges();
+    }
     addProduct(product) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             product.creator = (yield this.angularFireAuth.currentUser).uid;
@@ -95,21 +107,26 @@ let ProductService = class ProductService {
                 console.log('ref: ', ref);
                 documentId = ref.id;
                 storageRef = this.storage.ref(`products/${documentId}`);
-                const uploadTask = storageRef.putString(imageData, 'base64', { contentType: 'image/png' });
-                return uploadTask;
-            }).then(task => {
-                console.log('TASK: ', task);
-                return storageRef.getDownloadURL().toPromise();
-            }).then(imageUrl => {
-                console.log('URL: ', imageUrl);
-                return this.angularFireStore.doc(`products/${documentId}`).update({ img: imageUrl });
+                const uploadTask = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["from"])(storageRef.putString(imageData, 'base64', { contentType: 'image/png' }));
+                return uploadTask.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["switchMap"])(obj => {
+                    return obj.ref.getDownloadURL();
+                }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["switchMap"])(imageUrl => {
+                    return this.angularFireStore.doc(`products/${documentId}`).update({ img: imageUrl });
+                }));
             });
+            // .then(task => {
+            //   console.log('TASK: ', task);
+            //   return storageRef.getDownloadURL().toPromise()
+            // }).then(imageUrl => {
+            //   console.log('URL: ', imageUrl);
+            //   return this.angularFireStore.doc(`products/${documentId}`).update({ img: imageUrl });
+            // });
         });
     }
     getSellerProduct() {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             const id = (yield this.angularFireAuth.currentUser).uid;
-            return this.angularFireStore.collection('products', ref => ref.where('creator', '==', id)).snapshotChanges().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(actions => actions.map(a => {
+            return this.angularFireStore.collection('products', ref => ref.where('creator', '==', id)).snapshotChanges().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["map"])(actions => actions.map(a => {
                 const data = a.payload.doc.data();
                 const id = a.payload.doc.id;
                 return { id, data };

@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n  <ion-toolbar>\n    <ion-title>buyerListDetails</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n\n</ion-content>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n  <ion-toolbar>\n    <ion-title>{{ product?.name }}</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n<img [src]=\"product?.img\" alt=\"\">\n<h2>{{ product?.name }}</h2>\n<p>{{ product?.description }}</p>\n<p>{{ product?.price | currency: 'USD'}}</p>\n</ion-content>\n");
 
 /***/ }),
 
@@ -39,19 +39,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
 /* harmony import */ var _raw_loader_buyer_list_details_page_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./buyer-list-details.page.html */ "5OT0");
 /* harmony import */ var _buyer_list_details_page_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./buyer-list-details.page.scss */ "67uP");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var src_app_services_product_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/services/product.service */ "Gdn9");
+
+
 
 
 
 
 let BuyerListDetailsPage = class BuyerListDetailsPage {
-    constructor() { }
+    constructor(route, productService) {
+        this.route = route;
+        this.productService = productService;
+        this.id = null;
+        this.product = null;
+    }
     ngOnInit() {
+        this.id = this.route.snapshot.params.id;
+        this.productService.getOneProduct(this.id).subscribe(res => {
+            this.product = res;
+        });
     }
 };
-BuyerListDetailsPage.ctorParameters = () => [];
+BuyerListDetailsPage.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
+    { type: src_app_services_product_service__WEBPACK_IMPORTED_MODULE_5__["ProductService"] }
+];
 BuyerListDetailsPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_4__["Component"])({
         selector: 'app-buyer-list-details',
         template: _raw_loader_buyer_list_details_page_html__WEBPACK_IMPORTED_MODULE_1__["default"],
         styles: [_buyer_list_details_page_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]

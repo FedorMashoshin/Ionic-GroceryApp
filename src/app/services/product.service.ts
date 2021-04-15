@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireStorage, AngularFireStorageReference } from '@angular/fire/storage';
-import { map } from 'rxjs/operators';
+import { from } from 'rxjs';
+import { map, switchMap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -41,15 +42,23 @@ export class ProductService {
       console.log('ref: ', ref);
       documentId = ref.id;
       storageRef = this.storage.ref(`products/${documentId}`);
-      const uploadTask = storageRef.putString(imageData, 'base64', { contentType: 'image/png' });
-      return uploadTask;
-    }).then(task => {
-      console.log('TASK: ', task);
-      return storageRef.getDownloadURL().toPromise()
-    }).then(imageUrl => {
-      console.log('URL: ', imageUrl);
-      return this.angularFireStore.doc(`products/${documentId}`).update({ img: imageUrl });
-    });
+      const uploadTask = from(storageRef.putString(imageData, 'base64', { contentType: 'image/png' }));
+      return uploadTask.pipe(
+        switchMap(obj => {
+          return obj.ref.getDownloadURL();
+        }),
+        switchMap(imageUrl => {
+          return this.angularFireStore.doc(`products/${documentId}`).update({ img: imageUrl })
+        })
+      );
+    })
+    // .then(task => {
+    //   console.log('TASK: ', task);
+    //   return storageRef.getDownloadURL().toPromise()
+    // }).then(imageUrl => {
+    //   console.log('URL: ', imageUrl);
+    //   return this.angularFireStore.doc(`products/${documentId}`).update({ img: imageUrl });
+    // });
   }
 
   public async getSellerProduct(){

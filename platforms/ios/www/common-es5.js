@@ -185,7 +185,13 @@
       /* harmony import */
 
 
-      var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! rxjs */
+      "qCKp");
+      /* harmony import */
+
+
+      var rxjs_operators__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! rxjs/operators */
       "kU1M");
 
@@ -199,6 +205,25 @@
         }
 
         _createClass(ProductService, [{
+          key: "getAllProducts",
+          value: function getAllProducts() {
+            return this.angularFireStore.collection('products').snapshotChanges().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["map"])(function (actions) {
+              return actions.map(function (a) {
+                var data = a.payload.doc.data();
+                var id = a.payload.doc.id;
+                return {
+                  id: id,
+                  data: data
+                };
+              });
+            }));
+          }
+        }, {
+          key: "getOneProduct",
+          value: function getOneProduct(id) {
+            return this.angularFireStore.doc("products/".concat(id)).valueChanges();
+          }
+        }, {
           key: "addProduct",
           value: function addProduct(product) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
@@ -222,18 +247,16 @@
                         console.log('ref: ', ref);
                         documentId = ref.id;
                         storageRef = _this.storage.ref("products/".concat(documentId));
-                        var uploadTask = storageRef.putString(imageData, 'base64', {
+                        var uploadTask = Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["from"])(storageRef.putString(imageData, 'base64', {
                           contentType: 'image/png'
-                        });
-                        return uploadTask;
-                      }).then(function (task) {
-                        console.log('TASK: ', task);
-                        return storageRef.getDownloadURL().toPromise();
-                      }).then(function (imageUrl) {
-                        console.log('URL: ', imageUrl);
-                        return _this.angularFireStore.doc("products/".concat(documentId)).update({
-                          img: imageUrl
-                        });
+                        }));
+                        return uploadTask.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["switchMap"])(function (obj) {
+                          return obj.ref.getDownloadURL();
+                        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["switchMap"])(function (imageUrl) {
+                          return _this.angularFireStore.doc("products/".concat(documentId)).update({
+                            img: imageUrl
+                          });
+                        }));
                       }));
 
                     case 8:
@@ -260,7 +283,7 @@
                       id = _context3.sent.uid;
                       return _context3.abrupt("return", this.angularFireStore.collection('products', function (ref) {
                         return ref.where('creator', '==', id);
-                      }).snapshotChanges().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(function (actions) {
+                      }).snapshotChanges().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["map"])(function (actions) {
                         return actions.map(function (a) {
                           var data = a.payload.doc.data();
                           var id = a.payload.doc.id;
